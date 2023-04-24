@@ -20,7 +20,7 @@ function useSessionStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   // Get from session storage then
   // parse stored json or return initialValue
   const readValue = useCallback((): T => {
-    // Prevent build error "window is undefined" but keep keep working
+    // Prevent build error "window is undefined" but keep working
     if (typeof window === 'undefined') {
       return initialValue
     }
